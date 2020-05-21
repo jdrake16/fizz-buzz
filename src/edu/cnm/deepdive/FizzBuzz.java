@@ -6,15 +6,13 @@ public class FizzBuzz {
     for (int counter = 0; counter <= 100; counter++) {
       String status = getStatus(counter);
       System.out.println(status);
-    }
+     }
+  }
 
-
-    }
-
-  static String getStatus(int counter) {
+  static String getStatus(int value) {
     String status = "";
-    boolean counterIsFizz= (counter % 3 == 0);
-    boolean counterIsBuzz= (counter % 5 == 0);
+    boolean counterIsFizz= (value % 3 == 0);
+    boolean counterIsBuzz= (value % 5 == 0);
     if (counterIsFizz) {
       status += "fizz";
     }
@@ -22,7 +20,7 @@ public class FizzBuzz {
       status += "buzz";
     }
     if (status.isEmpty()) {
-     status += counter;
+     status += value;
     }
     return status;
   }
